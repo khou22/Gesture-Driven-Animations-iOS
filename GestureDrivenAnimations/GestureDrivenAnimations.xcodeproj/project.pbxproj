@@ -14,6 +14,9 @@
 		11F1669B1D21B17F006D6B33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F166991D21B17F006D6B33 /* LaunchScreen.storyboard */; };
 		11F166A61D21B180006D6B33 /* GestureDrivenAnimationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F166A51D21B180006D6B33 /* GestureDrivenAnimationsTests.swift */; };
 		11F166B11D21B180006D6B33 /* GestureDrivenAnimationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F166B01D21B180006D6B33 /* GestureDrivenAnimationsUITests.swift */; };
+		11F166BF1D21B23D006D6B33 /* Interpolate in Resources */ = {isa = PBXBuildFile; fileRef = 11F166BE1D21B23D006D6B33 /* Interpolate */; };
+		11F166D31D21B2D5006D6B33 /* Interpolate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11F166C71D21B246006D6B33 /* Interpolate.framework */; };
+		11F166D41D21B2D5006D6B33 /* Interpolate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11F166C71D21B246006D6B33 /* Interpolate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +34,49 @@
 			remoteGlobalIDString = 11F1668C1D21B17F006D6B33;
 			remoteInfo = GestureDrivenAnimations;
 		};
+		11F166C61D21B246006D6B33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11F166C01D21B246006D6B33 /* Interpolate.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3448A0E21CBA2A1A00E818C2;
+			remoteInfo = Interpolate;
+		};
+		11F166C81D21B246006D6B33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11F166C01D21B246006D6B33 /* Interpolate.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3440B2621CDFD0B3009A7712;
+			remoteInfo = "Interpolate tvOS";
+		};
+		11F166CA1D21B246006D6B33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11F166C01D21B246006D6B33 /* Interpolate.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3448A0EC1CBA2A1B00E818C2;
+			remoteInfo = InterpolateTests;
+		};
+		11F166D51D21B2D5006D6B33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11F166C01D21B246006D6B33 /* Interpolate.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3448A0E11CBA2A1A00E818C2;
+			remoteInfo = Interpolate;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		11F166D71D21B2D5006D6B33 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				11F166D41D21B2D5006D6B33 /* Interpolate.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		11F1668D1D21B17F006D6B33 /* GestureDrivenAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureDrivenAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +92,8 @@
 		11F166AC1D21B180006D6B33 /* GestureDrivenAnimationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureDrivenAnimationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F166B01D21B180006D6B33 /* GestureDrivenAnimationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureDrivenAnimationsUITests.swift; sourceTree = "<group>"; };
 		11F166B21D21B180006D6B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11F166BE1D21B23D006D6B33 /* Interpolate */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Interpolate; sourceTree = "<group>"; };
+		11F166C01D21B246006D6B33 /* Interpolate.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Interpolate.xcodeproj; path = ../../../Downloads/Interpolate/Interpolate.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11F166D31D21B2D5006D6B33 /* Interpolate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +125,8 @@
 		11F166841D21B17F006D6B33 = {
 			isa = PBXGroup;
 			children = (
+				11F166BE1D21B23D006D6B33 /* Interpolate */,
+				11F166C01D21B246006D6B33 /* Interpolate.xcodeproj */,
 				11F1668F1D21B17F006D6B33 /* GestureDrivenAnimations */,
 				11F166A41D21B180006D6B33 /* GestureDrivenAnimationsTests */,
 				11F166AF1D21B180006D6B33 /* GestureDrivenAnimationsUITests */,
@@ -125,6 +175,16 @@
 			path = GestureDrivenAnimationsUITests;
 			sourceTree = "<group>";
 		};
+		11F166C11D21B246006D6B33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11F166C71D21B246006D6B33 /* Interpolate.framework */,
+				11F166C91D21B246006D6B33 /* Interpolate.framework */,
+				11F166CB1D21B246006D6B33 /* InterpolateTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +195,12 @@
 				11F166891D21B17F006D6B33 /* Sources */,
 				11F1668A1D21B17F006D6B33 /* Frameworks */,
 				11F1668B1D21B17F006D6B33 /* Resources */,
+				11F166D71D21B2D5006D6B33 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				11F166D61D21B2D5006D6B33 /* PBXTargetDependency */,
 			);
 			name = GestureDrivenAnimations;
 			productName = GestureDrivenAnimations;
@@ -215,6 +277,12 @@
 			mainGroup = 11F166841D21B17F006D6B33;
 			productRefGroup = 11F1668E1D21B17F006D6B33 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 11F166C11D21B246006D6B33 /* Products */;
+					ProjectRef = 11F166C01D21B246006D6B33 /* Interpolate.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				11F1668C1D21B17F006D6B33 /* GestureDrivenAnimations */,
@@ -224,6 +292,30 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		11F166C71D21B246006D6B33 /* Interpolate.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Interpolate.framework;
+			remoteRef = 11F166C61D21B246006D6B33 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		11F166C91D21B246006D6B33 /* Interpolate.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Interpolate.framework;
+			remoteRef = 11F166C81D21B246006D6B33 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		11F166CB1D21B246006D6B33 /* InterpolateTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = InterpolateTests.xctest;
+			remoteRef = 11F166CA1D21B246006D6B33 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		11F1668B1D21B17F006D6B33 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -231,6 +323,7 @@
 			files = (
 				11F1669B1D21B17F006D6B33 /* LaunchScreen.storyboard in Resources */,
 				11F166981D21B17F006D6B33 /* Assets.xcassets in Resources */,
+				11F166BF1D21B23D006D6B33 /* Interpolate in Resources */,
 				11F166961D21B17F006D6B33 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +382,11 @@
 			isa = PBXTargetDependency;
 			target = 11F1668C1D21B17F006D6B33 /* GestureDrivenAnimations */;
 			targetProxy = 11F166AD1D21B180006D6B33 /* PBXContainerItemProxy */;
+		};
+		11F166D61D21B2D5006D6B33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Interpolate;
+			targetProxy = 11F166D51D21B2D5006D6B33 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -399,6 +497,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = GestureDrivenAnimations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KevinHou.GestureDrivenAnimations;
@@ -410,6 +509,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = GestureDrivenAnimations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KevinHou.GestureDrivenAnimations;
