@@ -14,7 +14,6 @@
 		11F1669B1D21B17F006D6B33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F166991D21B17F006D6B33 /* LaunchScreen.storyboard */; };
 		11F166A61D21B180006D6B33 /* GestureDrivenAnimationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F166A51D21B180006D6B33 /* GestureDrivenAnimationsTests.swift */; };
 		11F166B11D21B180006D6B33 /* GestureDrivenAnimationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F166B01D21B180006D6B33 /* GestureDrivenAnimationsUITests.swift */; };
-		11F1673B1D21EE2C006D6B33 /* Interpolate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1673A1D21EE2C006D6B33 /* Interpolate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +60,6 @@
 		11F166AC1D21B180006D6B33 /* GestureDrivenAnimationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureDrivenAnimationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F166B01D21B180006D6B33 /* GestureDrivenAnimationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureDrivenAnimationsUITests.swift; sourceTree = "<group>"; };
 		11F166B21D21B180006D6B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		11F1673A1D21EE2C006D6B33 /* Interpolate.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; fileEncoding = 4; path = Interpolate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +112,6 @@
 			children = (
 				11F166901D21B17F006D6B33 /* AppDelegate.swift */,
 				11F166921D21B17F006D6B33 /* ViewController.swift */,
-				11F1673A1D21EE2C006D6B33 /* Interpolate.swift */,
 				11F166941D21B17F006D6B33 /* Main.storyboard */,
 				11F166971D21B17F006D6B33 /* Assets.xcassets */,
 				11F166991D21B17F006D6B33 /* LaunchScreen.storyboard */,
@@ -210,17 +207,21 @@
 				TargetAttributes = {
 					11F1668C1D21B17F006D6B33 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = MD3DVWL744;
-						DevelopmentTeamName = "Charles Michael Yim (Personal Team)";
+						DevelopmentTeam = Y2J85SX698;
+						DevelopmentTeamName = "Breathometer, Inc.";
 						LastSwiftMigration = 0800;
 					};
 					11F166A01D21B180006D6B33 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = Y2J85SX698;
+						DevelopmentTeamName = "Breathometer, Inc.";
 						LastSwiftMigration = 0800;
 						TestTargetID = 11F1668C1D21B17F006D6B33;
 					};
 					11F166AB1D21B180006D6B33 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = Y2J85SX698;
+						DevelopmentTeamName = "Breathometer, Inc.";
 						LastSwiftMigration = 0800;
 						TestTargetID = 11F1668C1D21B17F006D6B33;
 					};
@@ -278,7 +279,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11F1673B1D21EE2C006D6B33 /* Interpolate.swift in Sources */,
 				11F166931D21B17F006D6B33 /* ViewController.swift in Sources */,
 				11F166911D21B17F006D6B33 /* AppDelegate.swift in Sources */,
 			);
