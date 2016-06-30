@@ -11,6 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var logoImage: UIImageView!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("Performing segue: \(segue.identifier)")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

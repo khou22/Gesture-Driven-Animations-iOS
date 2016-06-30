@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112643551D25C2B800D0D19E /* Pager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112643541D25C2B800D0D19E /* Pager.swift */; };
+		112643571D25C2E200D0D19E /* PageOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112643561D25C2E200D0D19E /* PageOne.swift */; };
+		112643591D25C2E700D0D19E /* PageTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112643581D25C2E700D0D19E /* PageTwo.swift */; };
 		11F166911D21B17F006D6B33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F166901D21B17F006D6B33 /* AppDelegate.swift */; };
 		11F166931D21B17F006D6B33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F166921D21B17F006D6B33 /* ViewController.swift */; };
 		11F166961D21B17F006D6B33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F166941D21B17F006D6B33 /* Main.storyboard */; };
@@ -47,6 +50,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		112643541D25C2B800D0D19E /* Pager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pager.swift; sourceTree = "<group>"; };
+		112643561D25C2E200D0D19E /* PageOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageOne.swift; sourceTree = "<group>"; };
+		112643581D25C2E700D0D19E /* PageTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTwo.swift; sourceTree = "<group>"; };
 		11F1668D1D21B17F006D6B33 /* GestureDrivenAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureDrivenAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F166901D21B17F006D6B33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F166921D21B17F006D6B33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +118,9 @@
 			children = (
 				11F166901D21B17F006D6B33 /* AppDelegate.swift */,
 				11F166921D21B17F006D6B33 /* ViewController.swift */,
+				112643541D25C2B800D0D19E /* Pager.swift */,
+				112643561D25C2E200D0D19E /* PageOne.swift */,
+				112643581D25C2E700D0D19E /* PageTwo.swift */,
 				11F166941D21B17F006D6B33 /* Main.storyboard */,
 				11F166971D21B17F006D6B33 /* Assets.xcassets */,
 				11F166991D21B17F006D6B33 /* LaunchScreen.storyboard */,
@@ -279,8 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112643591D25C2E700D0D19E /* PageTwo.swift in Sources */,
+				112643551D25C2B800D0D19E /* Pager.swift in Sources */,
 				11F166931D21B17F006D6B33 /* ViewController.swift in Sources */,
 				11F166911D21B17F006D6B33 /* AppDelegate.swift in Sources */,
+				112643571D25C2E200D0D19E /* PageOne.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
