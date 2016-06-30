@@ -19,8 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KHou Logo" translatesAutoresizingMaskIntoConstraints="NO" id="iKn-R3-zFx"/>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4r-Bd-r5f">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KHou Logo" translatesAutoresizingMaskIntoConstraints="NO" id="iKn-R3-zFx"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4r-Bd-r5f">
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="8pY-7M-B9H" kind="showDetail" identifier="SegueToPager" id="xO7-d6-Bl9"/>
@@ -62,7 +62,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.17254901959999999" green="0.2274509804" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="m8G-5Y-uJO" firstAttribute="centerY" secondItem="kN4-PD-k4W" secondAttribute="centerY" id="Ujz-qo-UK9"/>
                             <constraint firstItem="m8G-5Y-uJO" firstAttribute="centerX" secondItem="kN4-PD-k4W" secondAttribute="centerX" id="V32-GW-LJU"/>
@@ -91,7 +91,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.17254901959999999" green="0.2274509804" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="xPT-RU-OgO" firstAttribute="centerX" secondItem="OJ8-Km-Pjc" secondAttribute="centerX" id="Mua-5b-tfc"/>
                             <constraint firstItem="xPT-RU-OgO" firstAttribute="centerY" secondItem="OJ8-Km-Pjc" secondAttribute="centerY" id="qwZ-Fm-b0i"/>
