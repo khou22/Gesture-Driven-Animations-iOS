@@ -129,8 +129,7 @@
                                     <constraint firstAttribute="width" secondItem="XLp-zX-TsN" secondAttribute="height" multiplier="317:306" id="OpQ-bQ-QAf"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HDC-Qy-o8U">
-                                <frame key="frameInset" minX="16" minY="436" width="343" height="223"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDC-Qy-o8U">
                                 <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn on Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7H3-QW-dPi">
@@ -179,6 +178,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="XLp-zX-TsN" secondAttribute="trailing" constant="20" id="t3V-Gu-lor"/>
                             <constraint firstItem="HDC-Qy-o8U" firstAttribute="top" secondItem="XLp-zX-TsN" secondAttribute="bottom" constant="8" id="w6o-ZE-yCQ"/>
                             <constraint firstItem="XLp-zX-TsN" firstAttribute="centerX" secondItem="OJ8-Km-Pjc" secondAttribute="centerX" id="wf9-wa-TyX"/>
+                            <constraint firstItem="6Ld-PO-IJ7" firstAttribute="top" secondItem="HDC-Qy-o8U" secondAttribute="bottom" constant="8" id="xiK-vc-Qr5"/>
                         </constraints>
                     </view>
                     <connections>
