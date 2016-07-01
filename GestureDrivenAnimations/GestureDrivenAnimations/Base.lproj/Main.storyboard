@@ -71,10 +71,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ih-NG-LgK">
+                                <state key="normal" title="Back Home"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="SAK-rb-tcp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cwx-al-ltF" firstAttribute="centerX" secondItem="WK3-17-wWD" secondAttribute="centerX" id="6xK-wU-XQ6"/>
+                            <constraint firstItem="8Ih-NG-LgK" firstAttribute="centerX" secondItem="WK3-17-wWD" secondAttribute="centerX" id="TbU-2p-jsT"/>
+                            <constraint firstItem="hiT-TT-OCi" firstAttribute="top" secondItem="8Ih-NG-LgK" secondAttribute="bottom" constant="8" id="W6n-lS-40T"/>
                             <constraint firstItem="cwx-al-ltF" firstAttribute="top" secondItem="sL7-kz-ONj" secondAttribute="bottom" id="WzC-D9-wM8"/>
                         </constraints>
                     </view>
@@ -100,11 +108,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sv-yU-bPK">
+                                <state key="normal" title="Back Home"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="zWs-Cu-XcM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="4sv-yU-bPK" firstAttribute="leading" secondItem="kN4-PD-k4W" secondAttribute="leadingMargin" id="JFU-Cu-q2Q"/>
                             <constraint firstItem="m8G-5Y-uJO" firstAttribute="centerY" secondItem="kN4-PD-k4W" secondAttribute="centerY" id="Ujz-qo-UK9"/>
                             <constraint firstItem="m8G-5Y-uJO" firstAttribute="centerX" secondItem="kN4-PD-k4W" secondAttribute="centerX" id="V32-GW-LJU"/>
+                            <constraint firstItem="4sv-yU-bPK" firstAttribute="top" secondItem="kN4-PD-k4W" secondAttribute="topMargin" constant="12" id="wp4-se-EtR"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -205,4 +221,7 @@
         <image name="iPhone Frame" width="600" height="755"/>
         <image name="iPhone Frame with Content" width="600" height="755"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="SAK-rb-tcp"/>
+    </inferredMetricsTieBreakers>
 </document>

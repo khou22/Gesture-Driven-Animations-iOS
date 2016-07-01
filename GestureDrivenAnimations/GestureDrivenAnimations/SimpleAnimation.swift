@@ -18,8 +18,12 @@ class SimpleAnimation: UIViewController {
     
     var backgroundColorAnimation: UIViewPropertyAnimator! // Declare background color animation
     
+    var equilibriumBackground: UIColor? // Declare standard background
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        equilibriumBackground = UIColor(white: view.frame.height / 2, alpha: 1.0)
         
         // Set background color
         view.backgroundColor = UIColor.white()
@@ -120,7 +124,20 @@ class SimpleAnimation: UIViewController {
                 })
                 circleAnimator.addCompletion({_ in 
                     // When animation complete
-                    self.backgroundColorAnimation?.fractionComplete = target.center.y / self.view.frame.height
+                    print("Returned to center")
+                })
+                
+                backgroundColorAnimation = UIViewPropertyAnimator(duration: 0.0, timingParameters: springParameters)
+                backgroundColorAnimation.addAnimations({
+                    self.equilibriumBackground = UIColor(white: 0.5, alpha: 1.0)
+                    self.view.backgroundColor = self.equilibriumBackground
+                })
+                backgroundColorAnimation.startAnimation() // Reset background color
+                backgroundColorAnimation.addCompletion({_ in
+                    self.backgroundColorAnimation.stopAnimation(false) // Don't let it start on its own
+                    self.backgroundColorAnimation = UIViewPropertyAnimator(duration: self.animationDuration, curve: .easeInOut, animations: {
+                        self.view.backgroundColor = UIColor.black()
+                    })
                 })
                 
                 circleAnimator!.startAnimation()
@@ -131,6 +148,7 @@ class SimpleAnimation: UIViewController {
             target.center = CGPoint(x: circleCenter!.x + translation.x, y: circleCenter!.y + translation.y) // Apply translation
             
             // Change background color based on position of circle
+            backgroundColorAnimation?.startAnimation()
             backgroundColorAnimation?.fractionComplete = target.center.y / self.view.frame.height
         default:
             break
