@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111C82031D26E4B000A90215 /* SimpleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111C82021D26E4B000A90215 /* SimpleAnimation.swift */; };
 		112643551D25C2B800D0D19E /* Pager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112643541D25C2B800D0D19E /* Pager.swift */; };
 		112643571D25C2E200D0D19E /* PageOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112643561D25C2E200D0D19E /* PageOne.swift */; };
 		112643591D25C2E700D0D19E /* PageTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112643581D25C2E700D0D19E /* PageTwo.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		111C82021D26E4B000A90215 /* SimpleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleAnimation.swift; sourceTree = "<group>"; };
 		112643541D25C2B800D0D19E /* Pager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pager.swift; sourceTree = "<group>"; };
 		112643561D25C2E200D0D19E /* PageOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageOne.swift; sourceTree = "<group>"; };
 		112643581D25C2E700D0D19E /* PageTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTwo.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				112643561D25C2E200D0D19E /* PageOne.swift */,
 				112643581D25C2E700D0D19E /* PageTwo.swift */,
 				11F166941D21B17F006D6B33 /* Main.storyboard */,
+				111C82021D26E4B000A90215 /* SimpleAnimation.swift */,
 				11F166971D21B17F006D6B33 /* Assets.xcassets */,
 				11F166991D21B17F006D6B33 /* LaunchScreen.storyboard */,
 				11F1669C1D21B17F006D6B33 /* Info.plist */,
@@ -292,6 +295,7 @@
 				112643551D25C2B800D0D19E /* Pager.swift in Sources */,
 				11F166931D21B17F006D6B33 /* ViewController.swift in Sources */,
 				11F166911D21B17F006D6B33 /* AppDelegate.swift in Sources */,
+				111C82031D26E4B000A90215 /* SimpleAnimation.swift in Sources */,
 				112643571D25C2E200D0D19E /* PageOne.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

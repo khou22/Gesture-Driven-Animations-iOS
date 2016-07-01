@@ -22,9 +22,15 @@
                         <subviews>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KHou Logo" translatesAutoresizingMaskIntoConstraints="NO" id="iKn-R3-zFx"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4r-Bd-r5f">
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Go To Pages"/>
                                 <connections>
                                     <segue destination="8pY-7M-B9H" kind="showDetail" identifier="SegueToPager" id="xO7-d6-Bl9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvg-nF-QXF">
+                                <state key="normal" title="Go to Simple"/>
+                                <connections>
+                                    <segue destination="nLU-X0-ikn" kind="showDetail" id="h46-Td-WgF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -32,9 +38,11 @@
                         <constraints>
                             <constraint firstItem="W4r-Bd-r5f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6d7-dl-dFq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iKn-R3-zFx" secondAttribute="trailing" constant="30" id="8Nx-UR-6yX"/>
+                            <constraint firstItem="yvg-nF-QXF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lg6-Ck-zmA"/>
                             <constraint firstItem="iKn-R3-zFx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OnV-Lh-KI5"/>
                             <constraint firstItem="iKn-R3-zFx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="SJl-lj-I0n"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W4r-Bd-r5f" secondAttribute="bottom" constant="65" id="a9Z-jH-ZA2"/>
+                            <constraint firstItem="yvg-nF-QXF" firstAttribute="top" secondItem="W4r-Bd-r5f" secondAttribute="bottom" constant="8" id="fir-PF-iOu"/>
                             <constraint firstItem="iKn-R3-zFx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sWs-Xn-0CU"/>
                         </constraints>
                     </view>
@@ -44,6 +52,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-69" y="35"/>
+        </scene>
+        <!--Simple Animation-->
+        <scene sceneID="TKW-DT-dul">
+            <objects>
+                <viewController storyboardIdentifier="SimpleAnimation" id="nLU-X0-ikn" customClass="SimpleAnimation" customModule="GestureDrivenAnimations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sL7-kz-ONj"/>
+                        <viewControllerLayoutGuide type="bottom" id="hiT-TT-OCi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WK3-17-wWD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple Animation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwx-al-ltF">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cwx-al-ltF" firstAttribute="centerX" secondItem="WK3-17-wWD" secondAttribute="centerX" id="6xK-wU-XQ6"/>
+                            <constraint firstItem="cwx-al-ltF" firstAttribute="top" secondItem="sL7-kz-ONj" secondAttribute="bottom" id="WzC-D9-wM8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BRq-vk-xrr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-70" y="751"/>
         </scene>
         <!--Page One-->
         <scene sceneID="J0N-Gc-373">
@@ -57,7 +95,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8G-5Y-uJO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page One" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8G-5Y-uJO">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
