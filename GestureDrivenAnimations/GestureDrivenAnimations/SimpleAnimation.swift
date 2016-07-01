@@ -11,7 +11,10 @@ import UIKit
 
 class SimpleAnimation: UIViewController {
     
-    var circlCenter: CGPoint!  // Create a circle view
+    var circleCenter: CGPoint!  // Create a circle view
+    
+    var circleAnimator: UIViewPropertyAnimator! // Declare circle animator
+    var animationDuration = 4.0 // Standard animation duration
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,9 @@ class SimpleAnimation: UIViewController {
         // Basically so that the circle "draggable"
         circle.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.dragCircle))) // Pass in dragCircle function as action function
         
+        // Add circle animation for expanding when being dragged
+        circleAnimator = UIViewPropertyAnimator(duration: animationDuration, curve: .easeInOut) // Don't initialize an action so that the breath animation doesn't kill itself after it finished
+        
         // Add the circle to the view controller as a subview
         self.view.addSubview(circle)
     }
@@ -41,15 +47,43 @@ class SimpleAnimation: UIViewController {
         
         switch gesture.state {
         case .began, .ended:
-            self.circlCenter = target.center // Return the circle to the center of view
+            self.circleCenter = target.center // Return the circle to the center of view
+            
+            if circleAnimator.state == .active {
+                // reset animator to inactive state
+                circleAnimator.stopAnimation(true)
+            }
+            
+            if (gesture.state == .began) {
+                // Add the animation to the cue
+                // Begin scaling circle
+                circleAnimator.addAnimations({
+                    target.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
+                })
+            } else {
+                circleAnimator.addAnimations({
+                    target.transform = CGAffineTransform.identity
+                })
+            }
+            
+            if (circleAnimator.isRunning) { // If the circle is currently expanding (if someone has touched the circle and initiated the animation)
+                
+                // This 'if' statement just reverses the animation
+                circleAnimator.pauseAnimation()
+                
+                // If the animation ended, reverse it and make the circle shrink back to normal
+                circleAnimator.isReversed = gesture.state == .ended
+            }
+            circleAnimator.startAnimation()
+            print("Starting animation")
+            
+            print("Animator isRunning, isReversed, state: \(circleAnimator.isRunning), \(circleAnimator.isReversed)") // Print key values
         case .changed:
             // If currently dragging
             let translation = gesture.translation(in: self.view) // Get pan translation
-            target.center = CGPoint(x: circlCenter!.x + translation.x, y: circlCenter!.y + translation.y) // Apply translation
+            target.center = CGPoint(x: circleCenter!.x + translation.x, y: circleCenter!.y + translation.y) // Apply translation
         default:
             break
         }
     }
-    
-    
 }
