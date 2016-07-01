@@ -16,8 +16,13 @@ class SimpleAnimation: UIViewController {
     var circleAnimator: UIViewPropertyAnimator! // Declare circle animator
     var animationDuration = 4.0 // Standard animation duration
     
+    var backgroundColorAnimation: UIViewPropertyAnimator! // Declare background color animation
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set background color
+        view.backgroundColor = UIColor.white()
         
         // Background info
         print("Simple animation screen loaded")
@@ -36,14 +41,20 @@ class SimpleAnimation: UIViewController {
         // Add circle animation for expanding when being dragged
         circleAnimator = UIViewPropertyAnimator(duration: animationDuration, curve: .easeInOut) // Don't initialize an action so that the breath animation doesn't kill itself after it finished
         
+        // Background animation for changing colors
+        backgroundColorAnimation = UIViewPropertyAnimator(duration: animationDuration, curve: .easeInOut, animations: {
+            self.view.backgroundColor = UIColor.black()
+        })
+        
         // Add the circle to the view controller as a subview
         self.view.addSubview(circle)
+        
     }
     
     func dragCircle(gesture: UIPanGestureRecognizer) {
         // When the circle gets panned on
         
-        let target = gesture.view!
+        let target = gesture.view! // Gesture's view (use to get the position of finger)
         
         switch gesture.state {
         case .began, .ended:
@@ -103,9 +114,13 @@ class SimpleAnimation: UIViewController {
                 // Update timing
                 circleAnimator = UIViewPropertyAnimator(duration: 0.0, timingParameters: springParameters) // Set duration to 0.0 so its natural looking
                 
-                // Add new animation
+                // Add new animation -> go back to center of page
                 circleAnimator!.addAnimations({
                     target.center = self.view.center
+                })
+                circleAnimator.addCompletion({_ in 
+                    // When animation complete
+                    self.backgroundColorAnimation?.fractionComplete = target.center.y / self.view.frame.height
                 })
                 
                 circleAnimator!.startAnimation()
@@ -114,6 +129,9 @@ class SimpleAnimation: UIViewController {
             // If currently dragging
             let translation = gesture.translation(in: self.view) // Get pan translation
             target.center = CGPoint(x: circleCenter!.x + translation.x, y: circleCenter!.y + translation.y) // Apply translation
+            
+            // Change background color based on position of circle
+            backgroundColorAnimation?.fractionComplete = target.center.y / self.view.frame.height
         default:
             break
         }
