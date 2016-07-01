@@ -49,19 +49,31 @@ class SimpleAnimation: UIViewController {
         case .began, .ended:
             self.circleCenter = target.center // Return the circle to the center of view
             
+            let durationFactor = circleAnimator.fractionComplete // Multiplier for original duration — percent complete
+            print("Breathing percentage complete:", durationFactor)
+            // Multiplier for original duration that will be used for new duration
+            circleAnimator.stopAnimation(false) // Stop animation
+            circleAnimator.finishAnimation(at: .current) // Make current position its new static position
+            
             if circleAnimator.state == .active {
                 // reset animator to inactive state
                 circleAnimator.stopAnimation(true)
             }
             
             if (gesture.state == .began) {
+                // Set timing function
+                let curveProvider = UICubicTimingParameters(controlPoint1: CGPoint(x: 0.2, y: -0.48), controlPoint2: CGPoint(x: 0.79, y: 1.41)) // Create custom timing via bezier curve
+                circleAnimator = UIViewPropertyAnimator(duration: animationDuration, timingParameters: curveProvider) // Apply properties
+                
                 // Add the animation to the cue
                 // Begin scaling circle
                 circleAnimator.addAnimations({
+                    target.backgroundColor = UIColor.green()
                     target.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
                 })
             } else {
                 circleAnimator.addAnimations({
+                    target.backgroundColor = UIColor.green()
                     target.transform = CGAffineTransform.identity
                 })
             }
@@ -74,10 +86,30 @@ class SimpleAnimation: UIViewController {
                 // If the animation ended, reverse it and make the circle shrink back to normal
                 circleAnimator.isReversed = gesture.state == .ended
             }
-            circleAnimator.startAnimation()
-            print("Starting animation")
+            circleAnimator.startAnimation() // Start animation
+            circleAnimator.pauseAnimation() // Pause so that we can set the duration factor
+            circleAnimator.continueAnimation(withTimingParameters: nil, durationFactor: durationFactor) // Apply duration factor
+            // This ensures that the deflating animation time is the same as the amount of time it was inflating for
             
             print("Animator isRunning, isReversed, state: \(circleAnimator.isRunning), \(circleAnimator.isReversed)") // Print key values
+            
+            if (gesture.state == .ended) {
+                let v = gesture.velocity(in: target)
+                // 500 is an arbitrary value that looked pretty good, you may want to base this on device resolution or view size.
+                // The y component of the velocity is usually ignored, but is used when animating the center of a view
+                let velocity = CGVector(dx: v.x / 500, dy: v.y / 500) // Determine resultant velocity
+                let springParameters = UISpringTimingParameters(mass: 2.5, stiffness: 70, damping: 55, initialVelocity: velocity) // Generate
+                
+                // Update timing
+                circleAnimator = UIViewPropertyAnimator(duration: 0.0, timingParameters: springParameters) // Set duration to 0.0 so its natural looking
+                
+                // Add new animation
+                circleAnimator!.addAnimations({
+                    target.center = self.view.center
+                })
+                
+                circleAnimator!.startAnimation()
+            }
         case .changed:
             // If currently dragging
             let translation = gesture.translation(in: self.view) // Get pan translation
