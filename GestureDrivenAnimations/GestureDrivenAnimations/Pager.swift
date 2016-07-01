@@ -32,7 +32,7 @@ class Pager: UIPageViewController {
         dataSource = self
         
         // Set animations
-        self.view.backgroundColor = UIColor.black()
+        self.view.backgroundColor = UIColor(red: 0.40, green: 0.40, blue: 0.40, alpha: 1.0)
         colorChange = UIViewPropertyAnimator(duration: 0.3, curve: .easeIn, animations: { [weak self] in
             self?.view.backgroundColor = UIColor(red: 255.0/255.0, green: 80.0/255.0, blue: 43.0/255.0, alpha: 1.0)
             })
@@ -97,8 +97,12 @@ extension Pager: UIScrollViewDelegate {
         let point = scrollView.contentOffset
         var percentComplete: CGFloat
         percentComplete = fabs(point.x - view.frame.size.width)/view.frame.size.width // Calc percentage complete
-        print("Percent of Scroll Completed: \(percentComplete)") // Feedback
+//        print("Percent of Scroll Completed: \(percentComplete)") // Feedback
         PercentageScrolled.value = Float(percentComplete) // Update the value
         colorChange?.fractionComplete = percentComplete
+        
+        // Update the animations in the PageTwo view controller
+        let PageTwoController: PageTwo = PageTwo(nibName: nil, bundle: nil)
+        PageTwoController.update()
     }
 }
