@@ -33,11 +33,19 @@
                                     <segue destination="nLU-X0-ikn" kind="showDetail" id="h46-Td-WgF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lW9-J5-2cd">
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <segue destination="oca-XP-fJZ" kind="showDetail" identifier="SegueToRegistration" id="Sey-IH-K2H"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="W4r-Bd-r5f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6d7-dl-dFq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iKn-R3-zFx" secondAttribute="trailing" constant="30" id="8Nx-UR-6yX"/>
+                            <constraint firstItem="lW9-J5-2cd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="AVh-PO-fUg"/>
+                            <constraint firstItem="lW9-J5-2cd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LZx-xg-3nV"/>
                             <constraint firstItem="yvg-nF-QXF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lg6-Ck-zmA"/>
                             <constraint firstItem="iKn-R3-zFx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OnV-Lh-KI5"/>
                             <constraint firstItem="iKn-R3-zFx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="SJl-lj-I0n"/>
@@ -90,6 +98,110 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRq-vk-xrr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-70" y="751"/>
+        </scene>
+        <!--Registration Page One-->
+        <scene sceneID="qH4-pd-SNW">
+            <objects>
+                <viewController id="oca-XP-fJZ" customClass="RegistrationPageOne" customModule="GestureDrivenAnimations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mEC-gT-8i1"/>
+                        <viewControllerLayoutGuide type="bottom" id="wKW-nl-YGZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X51-mm-OSb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4zJ-Jw-Wh6">
+                                <frame key="frameInset" minY="20" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="0.99607843139999996" green="0.3294117647" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="SLIM Profile" id="bT2-JW-Ig4"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="13j-y7-K5w">
+                                <frame key="frameInset" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Back" id="RDQ-lR-nMx">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="coverVertical" id="SlL-tR-CDZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ot9-oL-4vd"/>
+                                    <barButtonItem title="Next" id="shz-pI-heI">
+                                        <connections>
+                                            <segue destination="IRK-2m-TXu" kind="presentation" identifier="RegOneToTwo" modalTransitionStyle="crossDissolve" id="4Wk-C2-9Su"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E4W-eo-MLN">
+                                <frame key="frameInset" minX="56" minY="170" width="262" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WRG-3j-keC">
+                                <frame key="frameInset" minX="56" minY="96" width="262" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="EmailInput" destination="E4W-eo-MLN" id="rKy-uS-WdK"/>
+                        <outlet property="NameInput" destination="WRG-3j-keC" id="Ttf-Q4-uda"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eer-7P-Cdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-92" y="-1314.6926536731635"/>
+        </scene>
+        <!--Registration Page Two-->
+        <scene sceneID="wZs-Cg-M5I">
+            <objects>
+                <viewController id="IRK-2m-TXu" customClass="RegistrationPageTwo" customModule="GestureDrivenAnimations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fnZ-V6-6yV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wbb-TB-lY2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9nm-Cc-ycM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QaL-gp-3xk">
+                                <frame key="frameInset" minY="20" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="0.99607843139999996" green="0.3294117647" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Health Information" id="UyA-OI-CL9"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pUM-gG-PnZ">
+                                <frame key="frameInset" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Back" id="iwy-0N-wRF">
+                                        <connections>
+                                            <segue destination="oca-XP-fJZ" kind="presentation" modalTransitionStyle="crossDissolve" id="KRb-AN-JJH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="X4O-YY-LVJ"/>
+                                    <barButtonItem title="Next" id="AfE-Kz-e4o"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ALs-na-fnc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="-1315"/>
         </scene>
         <!--Page One-->
         <scene sceneID="J0N-Gc-373">
@@ -222,6 +334,7 @@
         <image name="iPhone Frame with Content" width="600" height="755"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SAK-rb-tcp"/>
+        <segue reference="SlL-tR-CDZ"/>
+        <segue reference="KRb-AN-JJH"/>
     </inferredMetricsTieBreakers>
 </document>
